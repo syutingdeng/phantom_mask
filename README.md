@@ -126,9 +126,9 @@ Respons:
 200 Success:順利更新
 400:
 |類型|說明|
+| -|-|
 |NoProduct|店家沒有指定商品|
-|error|Exception|
-Roll back TRANSACTION
+|error|Exception and Roll back TRANSACTION|
 
 #補充說明:
 實作增加購買紀錄以及更新藥局餘額兩項功能
