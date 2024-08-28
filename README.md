@@ -13,6 +13,10 @@ app.py:主程式
 第一次使用或需要重新進行資料轉換至 DB 時執行 ParsingRawData.py  
 接著執行 app.py 啟動服務
 
+#Bonous  
+部屬於 Azure:  
+https://kdanphantommask-c7gkf6cwh3h7bpab.eastasia-01.azurewebsites.net
+
 1.List all pharmacies open at a specific time and on a day of the week if requested.  
 Path: /pharmacies/open  
 HTTP Method: GET  
