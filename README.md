@@ -20,7 +20,7 @@ https://kdanphantommask-c7gkf6cwh3h7bpab.eastasia-01.azurewebsites.net
 1.List all pharmacies open at a specific time and on a day of the week if requested.  
 Path: /pharmacies/open  
 HTTP Method: GET  
-Params:
+Params:  
 |Key|Value|  
 |----|----|  
 |day|Mon,Tue,Wed,Thur,Fri,Sat,Sun|  
@@ -32,25 +32,25 @@ Response:
 |name|藥局名稱|
 |openingHours|開門時間|
 
-2.List all masks sold by a given pharmacy, sorted by mask name or price.
-Path: /masks/by_pharmacy
-HTTP Method: GET  
-Params:
+2.List all masks sold by a given pharmacy, sorted by mask name or price.  
+Path: /masks/by_pharmacy  
+HTTP Method: GET    
+Params:  
 |Key|Value|  
 |----|----|  
 |pharmacyName|藥局名稱(Text)|  
 |sortBy|price,name|
 
-Response:
+Response:  
 |Key|Value|  
 |----|----|  
 |name|商品名稱|
 |price|價格|
 
-3.List all pharmacies with more or less than x mask products within a price range.  
-Path:/pharmacies/with_masks  
-HTTP Method: GET  
-Params:
+3.List all pharmacies with more or less than x mask products within a price range.    
+Path:/pharmacies/with_masks    
+HTTP Method: GET    
+Params:  
 |Key|Value|  
 |----|----|  
 |maskCount|數量(int)|  
@@ -58,14 +58,14 @@ Params:
 |priceMin|價格下限|  
 |priceMax|價格上限|
 
-Rsponse:
+Rsponse:  
 |Key|Value|  
 |----|----|  
 |X|產品數量|
 |name|藥局名稱|
 
-4.The top x users by total transaction amount of masks within a date range.
-Path:/top_users
+4.The top x users by total transaction amount of masks within a date range.  
+Path:/top_users  
 HTTP Method: GET  
 Params:
 |Key|Value|  
@@ -74,17 +74,17 @@ Params:
 |startDate|開始時間(YYYY-MM-DD HH:MM:SS)|
 |endDate|結束時間(YYYY-MM-DD HH:MM:SS)|
 
-Rsponse:
+Rsponse:  
 |Key|Value|  
 |----|----|  
 |name|消費者|
 |total_amount|消費金額|
 
-5.The total amount of masks and dollar value of transactions within a date range.
+5.The total amount of masks and dollar value of transactions within a date range.  
 
-Path: /total_mask
-HTTP Method: GET  
-Params:
+Path: /total_mask  
+HTTP Method: GET    
+Params:  
 |Key|Value|  
 |----|----|  
 |startDate|開始時間(YYYY-MM-DD HH:MM:SS)|
@@ -96,8 +96,8 @@ Rsponse:
 |total_amount|時間內總金額|
 |total_masks|時間內範圍產品數|
 
-6.Search for pharmacies or masks by name, ranked by relevance to the search term.
-Path: /search
+6.Search for pharmacies or masks by name, ranked by relevance to the search term.  
+Path: /search  
 HTTP Method: GET  
 Params:
 |Key|Value|  
@@ -111,12 +111,12 @@ Rsponse:
 
 ##補充說明: 這裡計算相關度的方式使用 sqlite fts-5 & BM25 來計算相關性
 
-7.Process a user purchases a mask from a pharmacy, and handle all relevant data changes in an atomic transaction.
+7.Process a user purchases a mask from a pharmacy, and handle all relevant data changes in an atomic transaction.  
 
-Path: /purchase
-HTTP Method: Post
+Path: /purchase  
+HTTP Method: Post  
 
-Request Body:
+Request Body:  
 
 | Key                | Value           |
 | ------------------ | --------------- |
