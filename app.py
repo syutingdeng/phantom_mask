@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-from flask_restful import Resource, Api, reqparse
 import sqlite3
 import re
 
@@ -16,7 +15,9 @@ def query_db(query, args=(), one=False):
     conn.close()
     return rv if rv else None
 
-
+@app.route('/', methods=['GET'])
+def index():
+   return "Hello World"
 
 @app.route('/pharmacies/open', methods=['GET'])
 def list_open_pharmacies():
