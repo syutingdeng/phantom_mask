@@ -13,7 +13,7 @@ app.py:主程式
 第一次使用或需要重新進行資料轉換至 DB 時執行 ParsingRawData.py  
 接著執行 app.py 啟動服務
 
-#Bonous  
+#Bonus  
 部屬於 Azure:  
 https://kdanphantommask-c7gkf6cwh3h7bpab.eastasia-01.azurewebsites.net
 
@@ -34,7 +34,7 @@ Response:
 
 2.List all masks sold by a given pharmacy, sorted by mask name or price.  
 Path: /masks/by_pharmacy  
-HTTP Method: GET    
+HTTP Method: GET  
 Params:  
 |Key|Value|  
 |----|----|  
@@ -47,9 +47,9 @@ Response:
 |name|商品名稱|
 |price|價格|
 
-3.List all pharmacies with more or less than x mask products within a price range.    
-Path:/pharmacies/with_masks    
-HTTP Method: GET    
+3.List all pharmacies with more or less than x mask products within a price range.  
+Path:/pharmacies/with_masks  
+HTTP Method: GET  
 Params:  
 |Key|Value|  
 |----|----|  
@@ -80,10 +80,10 @@ Rsponse:
 |name|消費者|
 |total_amount|消費金額|
 
-5.The total amount of masks and dollar value of transactions within a date range.  
+5.The total amount of masks and dollar value of transactions within a date range.
 
 Path: /total_mask  
-HTTP Method: GET    
+HTTP Method: GET  
 Params:  
 |Key|Value|  
 |----|----|  
@@ -111,12 +111,12 @@ Rsponse:
 
 ##補充說明: 這裡計算相關度的方式使用 sqlite fts-5 & BM25 來計算相關性
 
-7.Process a user purchases a mask from a pharmacy, and handle all relevant data changes in an atomic transaction.  
+7.Process a user purchases a mask from a pharmacy, and handle all relevant data changes in an atomic transaction.
 
 Path: /purchase  
-HTTP Method: Post  
+HTTP Method: Post
 
-Request Body:  
+Request Body:
 
 | Key                | Value           |
 | ------------------ | --------------- |
